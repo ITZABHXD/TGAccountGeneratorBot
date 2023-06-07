@@ -31,7 +31,7 @@ genMsg = """𝙃𝙚𝙧𝙚 𝙄𝙨 𝙔𝙤𝙪𝙧 {account} 𝘼𝙘𝙘�
 𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙚𝙙 𝘽𝙮: **{name}**
 
 𝙏𝙝𝙖𝙣𝙠 𝙮𝙤𝙪 𝙛𝙤𝙧 𝙪𝙨𝙞𝙣𝙜 𝙢𝙚!
-❤️𝙎𝙝𝙖𝙧𝙚 & 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 **{channelName}**❤️"""
+❤️𝙎𝙝𝙖𝙧𝙚 & 𝙎𝙪𝙥𝙥𝙤𝙧𝙩 **{channelName}** ❤️"""
 
 
 ####################################################################
@@ -63,7 +63,7 @@ I can provide premium accounts of different services
 --------------------------------------------------
 Do /gen to generate an account
 --------------------------------------------------
-❤️Brought to You By @PandaZnetwork || Made by @HeisenbergTheDanger❤️**"""
+❤️Brought to You By @TheShadowNetwork || Made With ❤️ By @itzAbhixD**"""
 
 ####################################################################
 
@@ -106,14 +106,14 @@ async def my_event_handler(event):
             hit = hit.hit.split(":")
             
             button = [
-                [Button.url("Authentication error?", "https://t.me/nordbypass")],
+                [Button.url("Dev 🧑‍💻", "https://t.me/itzAbhixD")],
                 [(Button.inline("Report not working", data=f"report_{hitID}"))]
             ]
             await bot.send_message(event.chat_id, genMsg.format(account = Var.account_name, email = hit[0], pwd = hit[1], name = first_name, channelName = Var.channelName), buttons = button)
         else:
             await bot.send_message(event.chat_id, "No account available right now.")
     if '/start' == event.raw_text.lower():
-        button = [[(Button.url("Repo Link", "https://github.com/leeveshkamboj/TGAccountGeneratorBot"))]]
+        button = [[(Button.url("Dev 🧑‍💻", "https://t.me/itzAbhixD"))]]
         await bot.send_message(event.chat_id, startMsg.format(name = first_name), buttons=button)
         return
     if event.chat_id in Var.ownerIDs:
